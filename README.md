@@ -6,6 +6,15 @@ Created with ❤️ by **Prabhat Dutt**.
 
 ---
 
+## 📷 Previews
+
+<p align="center">
+  <img src="assets/widget-dark.png" alt="Dark Mode Preview" width="360" />
+  <img src="assets/widget-white.png" alt="Light Mode Preview" width="360" />
+</p>
+
+---
+
 ## ✨ Features
 
 - **⏱️ Dual Mode Support**: Switch seamlessly between **Countdown Timer** and **Stopwatch** modes.
