@@ -8,25 +8,25 @@ Created with ❤️ by **Prabhat Dutt**.
 
 ## 📷 Previews
 
-<p align="center">
+<div align="center">
   <h3>Dark Mode</h3>
-  <img src="assets/widget-dark.png" alt="Dark Mode Preview" width="550" />
-</p>
+  <img src="assets/widget-dark.png" alt="Dark Mode Preview" width="520" />
+</div>
 
 <br />
 
-<p align="center">
+<div align="center">
   <h3>Light Mode</h3>
-  <img src="assets/widget-white.png" alt="Light Mode Preview" width="550" />
-</p>
+  <img src="assets/widget-white.png" alt="Light Mode Preview" width="520" />
+</div>
 
 <br />
 
-<p align="center">
+<div align="center">
   <h3>Timer & Stopwatch Modes</h3>
-  <img src="assets/Timer-mode.png" alt="Timer Mode Preview" width="360" />
-  <img src="assets/stopwatch-mode.png" alt="Stopwatch Mode Preview" width="360" />
-</p>
+  <img src="assets/Timer-mode.png" alt="Timer Mode Preview" width="44%" />
+  <img src="assets/stopwatch-mode.png" alt="Stopwatch Mode Preview" width="44%" />
+</div>
 
 ---
 
