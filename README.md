@@ -27,7 +27,7 @@ Created with ❤️ by **Prabhat Dutt**.
 ### ⏱️ Timer & Stopwatch Modes
 <div align="center">
   <img src="assets/Timer-mode.png" alt="Timer Mode Preview" width="44%" />
-  <img src="assets/Stopwatch-mode.png" alt="Stopwatch Mode Preview" width="44%" />
+  <img src="assets/stopwatch-mode.png" alt="Stopwatch Mode Preview" width="44%" />
 </div>
 
 <br />
