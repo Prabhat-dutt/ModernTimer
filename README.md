@@ -9,8 +9,15 @@ Created with ❤️ by **Prabhat Dutt**.
 ## 📷 Previews
 
 <p align="center">
-  <img src="assets/widget-dark.png" alt="Dark Mode Preview" width="360" />
-  <img src="assets/widget-white.png" alt="Light Mode Preview" width="360" />
+  <h3>Dark Mode</h3>
+  <img src="assets/widget-dark.png" alt="Dark Mode Preview" width="550" />
+</p>
+
+<br />
+
+<p align="center">
+  <h3>Light Mode</h3>
+  <img src="assets/widget-white.png" alt="Light Mode Preview" width="550" />
 </p>
 
 ---
