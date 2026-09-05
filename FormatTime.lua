@@ -40,6 +40,14 @@ function Initialize()
     currentSeconds = tonumber(SKIN:GetVariable('PresetTime', 60))
     totalTarget = currentSeconds
     savedTimerSeconds = currentSeconds
+
+    local alwaysOnTop = tonumber(SKIN:GetVariable('AlwaysOnTop', '0'))
+    if alwaysOnTop == 1 then
+        SKIN:Bang('!ZPos', 2)
+    else
+        SKIN:Bang('!ZPos', 0)
+    end
+
     SyncStateVariables()
 end
 
@@ -245,4 +253,31 @@ function ToggleInfo()
     SKIN:Bang('!UpdateMeter', '*')
     SKIN:Bang('!Redraw')
 end
+
+function ToggleCollapse()
+    local isCollapsed = tonumber(SKIN:GetVariable('IsCollapsed', '0'))
+    if isCollapsed == 1 then
+        SKIN:Bang('!SetVariable', 'IsCollapsed', '0')
+    else
+        SKIN:Bang('!SetVariable', 'IsCollapsed', '1')
+    end
+    SKIN:Bang('!UpdateMeter', '*')
+    SKIN:Bang('!Redraw')
+end
+
+function ToggleAlwaysOnTop()
+    local alwaysOnTop = tonumber(SKIN:GetVariable('AlwaysOnTop', '0'))
+    if alwaysOnTop == 1 then
+        alwaysOnTop = 0
+        SKIN:Bang('!ZPos', 0)
+    else
+        alwaysOnTop = 1
+        SKIN:Bang('!ZPos', 2)
+    end
+    SKIN:Bang('!SetVariable', 'AlwaysOnTop', alwaysOnTop)
+    SKIN:Bang('!WriteKeyValue', 'Variables', 'AlwaysOnTop', alwaysOnTop)
+    SKIN:Bang('!UpdateMeter', '*')
+    SKIN:Bang('!Redraw')
+end
+
 
