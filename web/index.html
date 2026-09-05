@@ -239,12 +239,26 @@
       text-align: center;
       position: relative;
       background-color: var(--bg-page);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
       background-image: 
         linear-gradient(to right, rgba(15, 23, 42, 0.045) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
       background-size: 32px 32px;
       mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, #000 55%, transparent 100%);
       -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 40%, #000 55%, transparent 100%);
+      z-index: 0;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
