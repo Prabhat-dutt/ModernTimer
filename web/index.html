@@ -650,6 +650,68 @@
       color: var(--text-primary);
     }
 
+    /* Mobile Menu Styles */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 6px 8px;
+      color: var(--text-primary);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.15s ease;
+    }
+
+    .mobile-menu-btn:hover {
+      background-color: var(--bg-subtle);
+    }
+
+    .mobile-menu {
+      display: none;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-color);
+      padding: 16px 0 20px;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .mobile-nav-link {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .mobile-nav-link:hover {
+      background-color: var(--bg-subtle);
+      color: var(--text-primary);
+    }
+
+    .mobile-menu-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-color);
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 900px) {
       .features-grid {
@@ -661,32 +723,170 @@
     }
 
     @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: flex;
+      }
+      .install-methods {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
       .gallery-pair-image {
         flex-direction: column;
         gap: 20px;
+        padding: 24px 16px;
       }
       .gallery-pair-image img {
         max-width: 100%;
       }
+      .gallery-single-image {
+        padding: 24px 16px;
+      }
     }
 
     @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .nav-wrapper {
+        height: 60px;
+      }
+
+      .brand {
+        font-size: 1rem;
+        gap: 8px;
+      }
+
+      .brand-badge {
+        font-size: 0.6875rem;
+        padding: 2px 6px;
+      }
+
+      .nav-star-btn {
+        padding: 6px 10px;
+        font-size: 0.8125rem;
+      }
+
+      /* Compact Section Paddings on Mobile */
+      .hero {
+        padding: 44px 0 32px;
+      }
+
       .hero h1 {
-        font-size: 2.25rem;
+        font-size: 1.875rem;
+        margin-bottom: 14px;
       }
-      .features-grid, .steps-list {
-        grid-template-columns: 1fr;
+
+      .hero p {
+        font-size: 0.9375rem;
+        margin-bottom: 24px;
       }
-      .nav-links {
-        display: none;
-      }
+
       .hero-cta {
         flex-direction: column;
+        gap: 10px;
+        margin-bottom: 28px;
       }
+
+      .hero-cta .btn {
+        width: 100%;
+      }
+
+      .hero-preview-frame {
+        padding: 10px;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      .section-header {
+        margin-bottom: 24px;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+      }
+
+      .features-grid, .steps-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .feature-card {
+        padding: 20px 16px;
+      }
+
+      .gallery-stack {
+        gap: 20px;
+      }
+
+      .gallery-card-body {
+        padding: 16px;
+      }
+
+      .gallery-header-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .install-card {
+        padding: 20px 16px;
+      }
+
+      .install-steps {
+        gap: 16px;
+        margin: 16px 0 20px;
+      }
+
+      .install-note {
+        padding: 14px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .code-box {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+        max-width: 100%;
+      }
+
+      .code-box span {
+        word-break: break-all;
+      }
+
+      /* Footer Mobile Adjustments */
+      footer {
+        padding: 32px 0 24px;
+      }
+
       .footer-content {
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
         text-align: center;
+      }
+
+      .footer-brand {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .brand-badge {
+        display: none;
       }
     }
   </style>
@@ -699,7 +899,7 @@
       <div class="nav-wrapper">
         <div class="brand">
           <img src="moderntimer-logo.png" alt="ModernTimer Logo" class="brand-logo" />
-          ModernTimer
+          <span>ModernTimer</span>
           <span class="brand-badge">Rainmeter Skin</span>
         </div>
         
@@ -718,12 +918,42 @@
         </ul>
 
         <div class="nav-actions">
-          <a href="https://github.com/Prabhat-dutt/ModernTimer" class="btn btn-secondary" target="_blank" rel="noopener">
+          <a href="https://github.com/Prabhat-dutt/ModernTimer" class="btn btn-secondary nav-star-btn" target="_blank" rel="noopener">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
             Star
-            <span class="star-badge" id="github-stars">★ 0</span>
+            <span class="star-badge github-stars-count">★ 0</span>
+          </a>
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <svg class="hamburger-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg class="close-icon" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display: none;">
+              <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+          <li><a href="#features" class="mobile-nav-link">Features</a></li>
+          <li><a href="#previews" class="mobile-nav-link">Previews</a></li>
+          <li><a href="#installation" class="mobile-nav-link">Installation</a></li>
+          <li>
+            <a href="https://github.com/Prabhat-dutt/ModernTimer" target="_blank" rel="noopener" class="mobile-nav-link">
+              <span>GitHub Repository</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="mobile-menu-actions">
+          <a href="https://github.com/Prabhat-dutt/ModernTimer/releases/download/v1.0/ModernTimer_1.0.rmskin" class="btn btn-primary" style="width: 100%;" target="_blank" rel="noopener">
+            Download Skin (.rmskin)
           </a>
         </div>
       </div>
@@ -1012,6 +1242,33 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle logic
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.querySelector('.hamburger-icon');
+      const closeIcon = document.querySelector('.close-icon');
+
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          mobileMenuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          if (hamburgerIcon) hamburgerIcon.style.display = isOpen ? 'none' : 'block';
+          if (closeIcon) closeIcon.style.display = isOpen ? 'block' : 'none';
+        });
+
+        // Close menu when clicking nav links
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            if (hamburgerIcon) hamburgerIcon.style.display = 'block';
+            if (closeIcon) closeIcon.style.display = 'none';
+          });
+        });
+      }
+
+      // GitHub Stars fetch
       fetch('https://api.github.com/repos/Prabhat-dutt/ModernTimer')
         .then(response => {
           if (!response.ok) throw new Error('Network error');
@@ -1019,10 +1276,10 @@
         })
         .then(data => {
           if (typeof data.stargazers_count === 'number') {
-            const starsBadge = document.getElementById('github-stars');
-            if (starsBadge) {
-              starsBadge.textContent = '★ ' + data.stargazers_count;
-            }
+            const starBadges = document.querySelectorAll('.github-stars-count');
+            starBadges.forEach(badge => {
+              badge.textContent = '★ ' + data.stargazers_count;
+            });
           }
         })
         .catch(err => {
