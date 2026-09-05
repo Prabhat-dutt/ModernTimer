@@ -20,6 +20,14 @@ Created with ❤️ by **Prabhat Dutt**.
   <img src="assets/widget-white.png" alt="Light Mode Preview" width="550" />
 </p>
 
+<br />
+
+<p align="center">
+  <h3>Timer & Stopwatch Modes</h3>
+  <img src="assets/Timer-mode.png" alt="Timer Mode Preview" width="360" />
+  <img src="assets/stopwatch-mode.png" alt="Stopwatch Mode Preview" width="360" />
+</p>
+
 ---
 
 ## ✨ Features
