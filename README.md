@@ -2,7 +2,9 @@
 
 A sleek, minimal, and highly customizable Countdown Timer & Stopwatch desktop widget for **Rainmeter**, featuring modern typography, dynamic theme switching, compact mini mode, and interactive task management.
 
-Created with ❤️ by **Prabhat Dutt**.
+🌐 **Live Showcase Website**: [https://moderntimer.pages.dev/](https://moderntimer.pages.dev/)
+
+Created with ❤️ by **[Prabhat Dutt](https://github.com/Prabhat-dutt)**.
 
 ---
 
